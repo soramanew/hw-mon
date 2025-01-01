@@ -1,0 +1,93 @@
+@mixin title-font {
+    font-family: "Gabarito", "Poppins", "Readex Pro", "Lexend", sans-serif;
+}
+
+@mixin main-font {
+    font-family: "Rubik", "Geist", "AR One Sans", "Reddit Sans", "Inter", "Roboto", "Ubuntu", "Noto Sans", sans-serif;
+}
+
+.resource-indicator-progress {
+    transition: 1000ms cubic-bezier(0.1, 1, 0, 1);
+    min-width: 1.091rem;
+    min-height: 10rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.resource-indicator-progress-wrapper {
+    min-width: 10rem;
+    min-height: 10rem;
+}
+
+.resource-indicator-value {
+    @include title-font;
+    font-size: 4.092rem;
+    font-weight: bold;
+    margin-top: 0.682rem;
+}
+
+.resource-indicator-unit {
+    @include title-font;
+    font-size: 2.046rem;
+    font-weight: bold;
+    margin-bottom: 1.023rem;
+}
+
+.resource-indicator-title {
+    @include main-font;
+    font-size: 1.364rem;
+    font-weight: 600;
+}
+
+.hardware-monitor {
+    border: 0.341rem solid #{"@theme_fg_color"};
+    border-radius: 0.682rem;
+    padding: 0.341rem 0.682rem;
+    margin-bottom: 1.364rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    & > :last-child {
+        margin: 0.682rem;
+
+        & > :first-child {
+            margin-right: 1.364rem;
+
+            & > * {
+                margin-bottom: 0.171rem;
+            }
+
+            & > :last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.hardware-monitor-label {
+    @include main-font;
+    font-size: 1.194rem;
+}
+
+.hardware-monitor-title {
+    @include title-font;
+    font-size: 2.046rem;
+    font-weight: 800;
+}
+
+.hardware-monitor-freq {
+    @include main-font;
+    font-size: 1.364rem;
+    font-weight: 500;
+}
+
+.hardware-monitor-icon {
+    font-size: 8.184rem;
+}
+
+.hardware-monitor-gpu-icon,
+.hardware-monitor-ram-icon {
+    margin-top: -1.091rem;
+}
